@@ -10006,9 +10006,10 @@ sane@^4.0.0:
   optionalDependencies:
     fsevents "^1.2.3"
 
-sass@^1.14.1:
-  version "1.14.1"
-  resolved "https://registry.yarnpkg.com/sass/-/sass-1.14.1.tgz#6f7b083b880104caa19e45841cdb0889d9bdadbf"
+sass@^1.16.1:
+  version "1.16.1"
+  resolved "https://registry.yarnpkg.com/sass/-/sass-1.16.1.tgz#3abbb04562c9e3a3ee11c3056956294ed333f6e6"
+  integrity sha512-lKoiOI/zsAHrdYAdcWBM0pynYCmK0t7N9OAVjxAoYvo0mDBQmlhM6w+zNuFQYeS6d3VF+7KVWwkX6oWNMJxVag==
   dependencies:
     chokidar "^2.0.0"
 
