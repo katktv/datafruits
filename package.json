@@ -88,6 +88,6 @@
     "ember-truth-helpers": "2.1.0",
     "phoenix": "1.2",
     "qunit-dom": "^0.8.0",
-    "sass": "^1.14.1"
+    "sass": "^1.20.3"
   }
 }
