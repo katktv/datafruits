@@ -87,6 +87,6 @@
     "eslint-plugin-node": "^9.0.1",
     "phoenix": "1.2",
     "qunit-dom": "^0.8.4",
-    "sass": "^1.14.1"
+    "sass": "^1.22.6"
   }
 }
