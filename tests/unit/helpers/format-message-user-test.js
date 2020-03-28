@@ -1,4 +1,4 @@
-import { formatMessageUser } from 'datafruits13/helpers/format-message-user';
+import { formatMessageUser } from 'datafruits/helpers/format-message-user';
 import { module, test } from 'qunit';
 
 module('Unit | Helper | format message user', function() {
