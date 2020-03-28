@@ -1,13 +1,13 @@
 import Route from '@ember/routing/route';
-import ENV from 'datafruits13/config/environment';
+import ENV from 'datafruits/config/environment';
 
 export default Route.extend({
-  model(params){
+  model(params) {
     return this.store.findRecord('blogPost', params.id);
   },
 
   afterModel(model) {
-   this.setHeadTags(model);
+    this.setHeadTags(model);
   },
 
   setHeadTags(model) {
@@ -16,21 +16,21 @@ export default Route.extend({
         type: 'meta',
         attrs: {
           name: 'twitter:title',
-          content: `datafruits.fm - ${model.title}`
+          content: `datafruits.fm - ${model.title}`,
         },
       },
     };
-    if(model.imageUrl){
+    if (model.imageUrl) {
       headTags['image'] = {
         type: 'meta',
         attrs: {
           name: 'twitter:image',
-          content: model.blogPostBodies.firstObject.previewImage.s3Url
+          content: model.blogPostBodies.firstObject.previewImage.s3Url,
         },
-      }
+      };
     }
 
     // TODO extract this to a function...
     this.set('headTags', Object.values({ ...ENV.headTags, ...headTags }));
-  }
+  },
 });

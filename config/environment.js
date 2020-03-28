@@ -2,12 +2,16 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'datafruits13',
+    modulePrefix: 'datafruits',
     environment: environment,
-    contentSecurityPolicy: { 'connect-src': "'self' http://localhost:3000 http://datafruits.streampusher.com http://datafruits.streampusher.com:8000 ws://hotdog-lounge.herokuapp.com ws://localhost:4000 https://vj.datafruits.fm",
-                             'media-src': "http://datafruits.streampusher.com:8000 http://relay.datafruits.fm:8000",
-                             'script-src': "'self' http://www.youtube.com http://s.ytimg.com",
-                             'child-src': "http://www.youtube.com"},
+    contentSecurityPolicy: {
+      'connect-src':
+        "'self' http://localhost:3000 http://datafruits.streampusher.com http://datafruits.streampusher.com:8000 ws://hotdog-lounge.herokuapp.com ws://localhost:4000 https://vj.datafruits.fm",
+      'media-src':
+        'http://datafruits.streampusher.com:8000 http://relay.datafruits.fm:8000',
+      'script-src': "'self' http://www.youtube.com http://s.ytimg.com",
+      'child-src': 'http://www.youtube.com'
+    },
     rootURL: '/',
     locationType: 'auto',
     EmberENV: {
@@ -27,11 +31,18 @@ module.exports = function(environment) {
     },
 
     fastboot: {
-      hostWhitelist: ['streampusher.com', 'datafruits.streampusher.com', 'datafruits.tumblr.com', 'datafruits.fm', 'www.datafruits.fm', /^localhost:\d+$/]
+      hostWhitelist: [
+        'streampusher.com',
+        'datafruits.streampusher.com',
+        'datafruits.tumblr.com',
+        'datafruits.fm',
+        'www.datafruits.fm',
+        /^localhost:\d+$/
+      ]
     },
 
     moment: {
-      includeTimezone: "subset"
+      includeTimezone: 'subset'
     },
 
     i18n: {
@@ -61,7 +72,7 @@ module.exports = function(environment) {
           // Ensure development env hits aren't sent to GA
           sendHitTask: environment !== 'development'
         }
-      },
+      }
     ],
 
     headTags: {
@@ -70,57 +81,57 @@ module.exports = function(environment) {
         attrs: {
           name: 'twitter:card',
           content: 'player'
-        },
+        }
       },
       site: {
         type: 'meta',
         attrs: {
           name: 'twitter:site',
           content: '@datafruits'
-        },
+        }
       },
       creator: {
         type: 'meta',
         attrs: {
           name: 'twitter:creator',
           content: '@datafruits'
-        },
+        }
       },
       title: {
         type: 'meta',
         attrs: {
           name: 'twitter:title',
           content: `datafruits.fm`
-        },
+        }
       },
       description: {
         type: 'meta',
         attrs: {
           name: 'twitter:description',
           content: 'its just a website'
-        },
+        }
       },
       player: {
         type: 'meta',
         attrs: {
           name: 'twitter:player',
-          content: "https://datafruits.fm/container"
-        },
+          content: 'https://datafruits.fm/container'
+        }
       },
       playerWidth: {
         type: 'meta',
         attrs: {
           name: 'twitter:player:width',
-          content: "480"
-        },
+          content: '480'
+        }
       },
       playerHeight: {
         type: 'meta',
         attrs: {
           name: 'twitter:player:height',
-          content: "80"
-        },
-      },
+          content: '80'
+        }
+      }
     },
 
     CHAT_SOCKET_URL: process.env.CHAT_SOCKET_URL,

@@ -1,9 +1,9 @@
 import Route from '@ember/routing/route';
-import ENV from 'datafruits13/config/environment';
+import ENV from 'datafruits/config/environment';
 
 export default Route.extend({
   afterModel() {
-   this.setHeadTags();
+    this.setHeadTags();
   },
 
   setHeadTags() {
